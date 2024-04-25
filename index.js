@@ -1,7 +1,22 @@
+// Arrow Function
 function fetchBooks() {
-  // To pass the tests, don't forget to return your fetch!
+  fetch("https://anapioficeandfire.com/api/books")
+  .then((resp) => resp.json())
+  .then((json) => renderBooks(json));
+  return fetch("https://anapioficeandfire.com/api/books")
   
 }
+
+//function fetchBooks() {
+ // fetch("https://anapioficeandfire.com/api/books")
+  //.then(function (response) {
+  //  return response.json()                                        regular function
+   // .then(function (getbooks) {
+     // return renderBooks(getbooks)
+   // });
+ // } )
+//return fetch("https://anapioficeandfire.com/api/books")
+//}
 
 function renderBooks(books) {
   const main = document.querySelector('main');
